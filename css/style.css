@@ -18,7 +18,7 @@ padding:25px 60px;
 }
 
 .logo{
-height:55px;
+    height:70px;
 }
 
 .menu a{
@@ -54,4 +54,20 @@ border-radius:12px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    gap:40px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#3B82F6;
 }
