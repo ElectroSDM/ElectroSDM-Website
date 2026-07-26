@@ -37,9 +37,15 @@ nav{
     padding:18px 60px;
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+}
+
 .logo img{
-    height:200px;
-    width:auto;
+    width:220px;
+    height:auto;
+    display:block;
 }
 
 .logo img:hover{
