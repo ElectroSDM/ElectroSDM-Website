@@ -349,35 +349,36 @@ nav{
 /* ========================= */
 
 .hero-home{
-    max-width:1400px;
-    margin:auto;
-    min-height:calc(100vh - 90px);
-
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
-    padding:80px 40px;
+    padding:60px 30px;
 }
 
 .hero-center{
     max-width:900px;
+    margin:auto;
 }
 
 .hero-logo{
-    width:520px;
+    width:420px;
     max-width:90%;
     margin-bottom:35px;
-    animation:float 5s ease-in-out infinite;
+}
+
+.hero-home .badge{
+    font-size:14px;
+    padding:8px 18px;
+    margin-bottom:25px;
 }
 
 .hero-home h1{
     font-size:82px;
     line-height:1.05;
-    margin:25px 0;
     font-weight:800;
+    margin-bottom:28px;
 }
 
 .hero-home h1 span{
@@ -385,11 +386,37 @@ nav{
 }
 
 .hero-home p{
-    max-width:720px;
-    margin:0 auto 45px;
-    font-size:24px;
-    color:#b8c0d0;
+    max-width:760px;
+    margin:0 auto 50px;
+    font-size:21px;
     line-height:1.7;
+    color:#AEB8CA;
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    padding:16px 34px;
+
+    border:1px solid rgba(59,130,246,.35);
+    border-radius:14px;
+
+    background:rgba(255,255,255,.03);
+
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.hero-button:hover{
+    background:rgba(59,130,246,.12);
+    border-color:#3B82F6;
+    transform:translateY(-2px);
 }
 
 .scroll-indicator{
@@ -482,4 +509,27 @@ footer{
 
 .footer-bottom p:first-child{
     margin-bottom:8px;
+}
+
+.scroll-indicator{
+    margin-top:70px;
+    font-size:36px;
+    color:#6EA8FF;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+        transform:translateY(0);
+    }
+
+    40%{
+        transform:translateY(10px);
+    }
+
+    60%{
+        transform:translateY(5px);
+    }
+
 }
