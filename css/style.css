@@ -554,3 +554,14 @@ footer{
     line-height:1.7;
     color:#AEB8CA;
 }
+.hero.hero-home{
+    max-width:none;
+    width:100%;
+    margin:0;
+    padding:60px 30px;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
