@@ -295,3 +295,45 @@ nav{
     text-decoration:none;
     font-weight:600;
 }
+
+/* ========================= */
+/* POPUP */
+/* ========================= */
+
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+}
+
+.popup-content{
+    width:700px;
+    max-width:90%;
+    background:#182334;
+    border-radius:20px;
+    padding:40px;
+    border:1px solid rgba(255,255,255,.08);
+    position:relative;
+}
+
+.popup-content h2{
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    color:#c6cfdd;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.close{
+    position:absolute;
+    right:25px;
+    top:20px;
+    font-size:32px;
+    cursor:pointer;
+}
