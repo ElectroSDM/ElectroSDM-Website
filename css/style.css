@@ -362,9 +362,7 @@ nav{
     margin-bottom:25px;
 }
 
-.hero-home h1{
-    font-size:20px !important;
-}
+
 .hero-home h1 span{
     color:#3B82F6;
 }
@@ -547,11 +545,12 @@ footer{
 }
 
 .hero-home p{
-    max-width:650px;
-    margin:0 auto 40px;
-    font-size:18px;
+    max-width:500px;
+    margin:0 auto 32px;
+    font-size:13px;
     line-height:1.7;
-    color:#AEB8CA;
+    color:#8B95A7;
+    font-weight:400;
 }
 .hero.hero-home{
     max-width:none;
