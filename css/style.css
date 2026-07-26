@@ -98,9 +98,7 @@ nav{
     gap:80px;
 }
 
-.hero-text{
-    max-width:650px;
-}
+
 .badge{
     display:inline-block;
     background:rgba(59,130,246,.15);
@@ -139,35 +137,13 @@ nav{
 /* BUTTONS */
 /* ========================= */
 
-.button{
-    display:inline-block;
-    padding:18px 38px;
-    background:linear-gradient(135deg,#2563EB,#3B82F6);
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:600;
-    border-radius:14px;
-    transition:.35s;
-    box-shadow:0 15px 35px rgba(37,99,235,.35);
-}
 
 .button:hover{
     transform:translateY(-4px);
     box-shadow:0 25px 50px rgba(37,99,235,.45);
 }
 
-.button2{
-    display:inline-block;
-    padding:18px 38px;
-    border:2px solid #3B82F6;
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:600;
-    border-radius:14px;
-    transition:.35s;
-}
+
 
 .button2:hover{
     background:#3B82F6;
@@ -177,19 +153,7 @@ nav{
 /* RECHTERKANT */
 /* ========================= */
 
-.hero-image{
-    width:560px;
-    height:560px;
-    border-radius:28px;
-    background:linear-gradient(180deg,#1E293B,#111827);
-    border:1px solid rgba(255,255,255,.06);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#6EA8FF;
-    font-size:22px;
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
-}
+
 
 /* ========================= */
 /* FEATURES */
@@ -378,4 +342,144 @@ nav{
 
 .close:hover{
     color:#3B82F6;
+}
+
+/* ========================= */
+/* HOME HERO */
+/* ========================= */
+
+.hero-home{
+    max-width:1400px;
+    margin:auto;
+    min-height:calc(100vh - 90px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 40px;
+}
+
+.hero-center{
+    max-width:900px;
+}
+
+.hero-logo{
+    width:520px;
+    max-width:90%;
+    margin-bottom:35px;
+    animation:float 5s ease-in-out infinite;
+}
+
+.hero-home h1{
+    font-size:82px;
+    line-height:1.05;
+    margin:25px 0;
+    font-weight:800;
+}
+
+.hero-home h1 span{
+    color:#3B82F6;
+}
+
+.hero-home p{
+    max-width:720px;
+    margin:0 auto 45px;
+    font-size:24px;
+    color:#b8c0d0;
+    line-height:1.7;
+}
+
+.scroll-indicator{
+    margin-top:70px;
+    font-size:38px;
+    color:#3B82F6;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(10px);}
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about{
+    max-width:1000px;
+    margin:140px auto;
+    padding:0 40px;
+    text-align:center;
+}
+
+.about p{
+    font-size:21px;
+    color:#b8c0d0;
+    line-height:1.9;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    background:#111827;
+    margin-top:140px;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.footer-container{
+    max-width:1400px;
+    margin:auto;
+    padding:80px 60px;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-column img{
+    margin-bottom:20px;
+}
+
+.footer-column h4{
+    margin-bottom:22px;
+    font-size:20px;
+}
+
+.footer-column p{
+    color:#94A3B8;
+    line-height:1.8;
+}
+
+.footer-column a{
+    display:block;
+    color:#94A3B8;
+    text-decoration:none;
+    margin-bottom:14px;
+    transition:.25s;
+}
+
+.footer-column a:hover{
+    color:#3B82F6;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.06);
+    padding:25px;
+    text-align:center;
+    color:#94A3B8;
+    font-size:15px;
+}
+
+.footer-bottom p:first-child{
+    margin-bottom:8px;
 }
