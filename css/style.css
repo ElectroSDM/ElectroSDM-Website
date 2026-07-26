@@ -41,13 +41,11 @@ nav{
     display:flex;
     align-items:center;
 }
-
 .logo img{
-    height:95px;
-    width:auto;
+    width:180px;
+    height:auto;
     display:block;
 }
-
 .logo img:hover{
     transform:scale(1.05);
 }
