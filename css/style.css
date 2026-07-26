@@ -2,40 +2,72 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     background:#0F172A;
-    color:white;
+    color:#ffffff;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+header{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 nav{
+    max-width:1400px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:25px 60px;
+    padding:22px 40px;
 }
 
-.logo{
+.logo img{
     height:70px;
+    transition:.3s;
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin-left:35px;
+.logo img:hover{
+    transform:scale(1.05);
 }
 
 .menu{
     display:flex;
-    gap:40px;
+    gap:35px;
 }
 
 .menu a{
     color:white;
     text-decoration:none;
-    font-size:18px;
+    font-size:17px;
+    font-weight:500;
+    position:relative;
+    transition:.3s;
+}
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    left:0;
+    width:0%;
+    height:2px;
+    background:#3B82F6;
     transition:.3s;
 }
 
@@ -43,42 +75,112 @@ nav{
     color:#3B82F6;
 }
 
+.menu a:hover::after{
+    width:100%;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
 .hero{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:85vh;
+    padding:0 40px;
+}
+
+.hero-text{
     max-width:700px;
-    margin-left:80px;
-    margin-top:120px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(59,130,246,.15);
+    border:1px solid rgba(59,130,246,.35);
+    color:#6EA8FF;
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:30px;
+    font-size:15px;
 }
 
 .hero h1{
-    font-size:72px;
-    line-height:1.1;
-    margin-bottom:20px;
+    font-size:82px;
+    line-height:1.05;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#3B82F6;
 }
 
 .hero p{
     font-size:24px;
     color:#b8c0d0;
-    margin-bottom:40px;
+    line-height:1.6;
+    margin-bottom:45px;
 }
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
 
 .button{
     display:inline-block;
-    padding:16px 34px;
+    padding:18px 38px;
     background:linear-gradient(135deg,#2563EB,#3B82F6);
     color:white;
     text-decoration:none;
     font-size:18px;
     font-weight:600;
     border-radius:14px;
-    transition:all .3s ease;
-    box-shadow:0 10px 30px rgba(37,99,235,.35);
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
 }
 
 .button:hover{
     transform:translateY(-4px);
-    box-shadow:0 20px 40px rgba(37,99,235,.45);
+    box-shadow:0 25px 50px rgba(37,99,235,.45);
 }
 
-.button:active{
-    transform:scale(.97);
+.button2{
+    display:inline-block;
+    padding:18px 38px;
+    border:2px solid #3B82F6;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    border-radius:14px;
+    transition:.35s;
+}
+
+.button2:hover{
+    background:#3B82F6;
+}
+
+/* ========================= */
+/* RECHTERKANT */
+/* ========================= */
+
+.hero-image{
+    width:500px;
+    height:500px;
+    border-radius:30px;
+    background:linear-gradient(180deg,#1E293B,#111827);
+    border:1px solid rgba(255,255,255,.05);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#6EA8FF;
+    font-size:22px;
 }
