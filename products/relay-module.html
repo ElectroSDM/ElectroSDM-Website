@@ -597,6 +597,171 @@
     </div>
 
 </div>
+
+    <div id="datasheetPopup" class="popup">
+
+        <div class="popup-content">
+    
+            <span class="close" onclick="closeDatasheetPopup()">&times;</span>
+    
+            <h2>Datasheet</h2>
+    
+            <p>
+                The official ElectroSDM Light Module datasheet contains all
+                technical information required for installation, integration
+                and product selection.
+            </p>
+    
+            <p>
+                It includes electrical specifications, dimensions, power
+                requirements, relay ratings, communication interfaces,
+                environmental limits and mechanical drawings.
+            </p>
+    
+            <p>
+                The datasheet is recommended for installers, developers and
+                anyone integrating the module into larger smart home projects.
+            </p>
+    
+            <br>
+    
+            <a href="#" class="button">
+                Download Datasheet
+            </a>
+    
+        </div>
+    
+    </div>
+<div id="manualPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeManualPopup()">&times;</span>
+
+        <h2>Installation Manual</h2>
+
+        <p>
+            The Installation Manual provides step-by-step instructions for installing,
+            wiring and configuring the ElectroSDM Light Module.
+        </p>
+
+        <p>
+            It includes wiring examples, DIN Rail mounting instructions,
+            first-time setup and important safety information.
+        </p>
+
+        <p>
+            The guide is intended for installers, electricians and advanced users.
+        </p>
+
+        <br>
+
+        <a href="#" class="button">
+            Download Manual
+        </a>
+
+    </div>
+
+</div>
+
+<div id="modelPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeModelPopup()">&times;</span>
+
+        <h2>3D Model</h2>
+
+        <p>
+            Download the official 3D model of the ElectroSDM Light Module
+            for cabinet planning and CAD software.
+        </p>
+
+        <p>
+            STEP files allow accurate integration into electrical cabinets
+            and custom enclosure designs.
+        </p>
+
+        <p>
+            Additional formats may become available in future releases.
+        </p>
+
+        <br>
+
+        <a href="#" class="button">
+            Download 3D Model
+        </a>
+
+    </div>
+
+</div>
+
+<div id="releasePopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeReleasePopup()">&times;</span>
+
+        <h2>Release Notes</h2>
+
+        <p>
+            View the latest firmware improvements, new features,
+            bug fixes and important changes for every release.
+        </p>
+
+        <p>
+            Release Notes help you understand what has changed
+            before updating your ElectroSDM devices.
+        </p>
+
+        <p>
+            We recommend reviewing the Release Notes before
+            installing every firmware update.
+        </p>
+
+        <br>
+
+        <a href="#" class="button">
+            Download Release Notes
+        </a>
+
+    </div>
+
+</div>
+
+<div id="firmwarePopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeFirmwarePopup()">&times;</span>
+
+        <h2>Firmware</h2>
+
+        <p>
+            Download the latest firmware for the ElectroSDM Light Module.
+            Firmware updates improve performance, reliability and security while
+            introducing new features and bug fixes.
+        </p>
+
+        <p>
+            ElectroSDM supports Over-The-Air (OTA) updates, allowing modules
+            to be updated without removing them from the electrical cabinet.
+        </p>
+
+        <p>
+            Always install the latest stable firmware unless a beta version
+            is specifically required.
+        </p>
+
+        <br>
+
+        <a href="../downloads/light-module-firmware.bin" class="button">
+            Download Firmware
+        </a>
+    </div>
+
+</div>
+
 <script>
 
 function openPowerPopup() {
@@ -630,7 +795,49 @@ function openOtaPopup() {
 function closeOtaPopup() {
     document.getElementById("otaPopup").style.display = "none";
 }
+    function openFirmwarePopup(){
+    document.getElementById("firmwarePopup").style.display = "flex";
+}
 
+function closeFirmwarePopup(){
+    document.getElementById("firmwarePopup").style.display = "none";
+}
+
+function openDatasheetPopup(){
+    document.getElementById("datasheetPopup").style.display = "flex";
+}
+
+function closeDatasheetPopup(){
+    document.getElementById("datasheetPopup").style.display = "none";
+}
+
+    function openManualPopup(){
+    document.getElementById("manualPopup").style.display="flex";
+}
+function closeManualPopup(){
+    document.getElementById("manualPopup").style.display="none";
+}
+
+function openKicadPopup(){
+    document.getElementById("kicadPopup").style.display="flex";
+}
+function closeKicadPopup(){
+    document.getElementById("kicadPopup").style.display="none";
+}
+
+function openModelPopup(){
+    document.getElementById("modelPopup").style.display="flex";
+}
+function closeModelPopup(){
+    document.getElementById("modelPopup").style.display="none";
+}
+
+function openReleasePopup(){
+    document.getElementById("releasePopup").style.display="flex";
+}
+function closeReleasePopup(){
+    document.getElementById("releasePopup").style.display="none";
+}
 window.addEventListener("click", function(event) {
 
     if(event.target == document.getElementById("powerPopup")){
@@ -648,6 +855,26 @@ window.addEventListener("click", function(event) {
     if(event.target == document.getElementById("otaPopup")){
         closeOtaPopup();
     }
+    if(event.target == document.getElementById("firmwarePopup")){
+    closeFirmwarePopup();
+    }
+    
+    if(event.target == document.getElementById("datasheetPopup")){
+        closeDatasheetPopup();
+    }
+    
+    if(event.target == document.getElementById("manualPopup")){
+        closeManualPopup();
+    }
+    
+    
+    if(event.target == document.getElementById("modelPopup")){
+        closeModelPopup();
+    }
+    
+    if(event.target == document.getElementById("releasePopup")){
+        closeReleasePopup();
+    }
 
 });
 
@@ -663,6 +890,8 @@ document.addEventListener("keydown", function(event){
     }
 
 });
+
+
 
 </script>
 
