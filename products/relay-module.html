@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroSDM | 5 Relay Module</title>
+    <title>ElectroSDM | Light module</title>
 
     <link rel="stylesheet" href="../css/style.css">
 
@@ -44,7 +44,7 @@
         </span>
 
         <h1>
-            5 Relay Module
+            Light module
         </h1>
 
         <p>
@@ -120,12 +120,12 @@
 
         <div class="product-card">
             <h3>Controller</h3>
-            <p>ESP32-S3</p>
+            <p>ESP32-C6-MINI</p>
         </div>
 
         <div class="product-card">
             <h3>Power Supply</h3>
-            <p>24V DC</p>
+            <p>5V DC</p>
         </div>
 
         <div class="product-card">
@@ -135,7 +135,12 @@
 
         <div class="product-card">
             <h3>Communication</h3>
-            <p>MQTT / Wi-Fi</p>
+        
+            <p>
+                Wi-Fi • MQTT
+                <br><br>
+                <a href="#" onclick="openPopup(); return false;">Learn More →</a>
+            </p>
         </div>
 
         <div class="product-card">
@@ -151,7 +156,57 @@
     </div>
 
 </section>
+<div id="popup" class="popup">
 
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup()">&times;</span>
+
+        <h2>Automatic Backup Communication</h2>
+
+        <p>
+            ElectroSDM modules primarily communicate over your local Wi-Fi
+            network using MQTT.
+        </p>
+
+        <p>
+            If the Wi-Fi network becomes unavailable, the modules are designed
+            to automatically switch to <strong>ESP-NOW</strong> communication,
+            allowing compatible ElectroSDM modules to continue exchanging
+            essential commands locally.
+        </p>
+
+        <p>
+            When the Wi-Fi connection is restored, communication automatically
+            returns to the normal MQTT network without user interaction.
+        </p>
+
+        <p>
+            This design helps keep connected wall switches and automation
+            functions available, even during temporary Wi-Fi interruptions.
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function openPopup(){
+    document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
+
+window.onclick=function(e){
+    if(e.target==document.getElementById("popup")){
+        closePopup();
+    }
+}
+
+</script>
 </body>
 
 </html>
