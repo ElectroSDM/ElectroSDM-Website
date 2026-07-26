@@ -190,3 +190,46 @@ nav{
     font-size:22px;
     box-shadow:0 25px 60px rgba(0,0,0,.35);
 }
+
+/* ========================= */
+/* FEATURES */
+/* ========================= */
+
+.features{
+    max-width:1400px;
+    margin:40px auto 120px;
+    padding:0 60px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.feature{
+    background:#182334;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:22px;
+    padding:35px;
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    border-color:#3B82F6;
+    box-shadow:0 20px 40px rgba(59,130,246,.15);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.feature h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#b8c0d0;
+    line-height:1.6;
+}
