@@ -367,6 +367,9 @@ nav{
     color:#3B82F6;
 }
 
+.hero-home h1{
+    font-size:20px !important;
+}
 .hero-home p{
     max-width:520px;
     margin:0 auto 38px;
