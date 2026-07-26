@@ -38,9 +38,8 @@ nav{
 }
 
 .logo img{
-    height:85px;
+    height:200px;
     width:auto;
-    transition:.3s;
 }
 
 .logo img:hover{
