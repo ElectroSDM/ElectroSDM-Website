@@ -31,15 +31,16 @@ header{
 nav{
     max-width:1400px;
     margin:auto;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:22px 40px;
+
+    padding:25px 60px;
 }
 
 .logo img{
-    height:70px;
-    transition:.3s;
+    height:60px;
 }
 
 .logo img:hover{
