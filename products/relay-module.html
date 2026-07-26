@@ -125,7 +125,14 @@
 
         <div class="product-card">
             <h3>Power Supply</h3>
-            <p>5V DC</p>
+            <p>
+                5V DC
+                <br><br>
+                <a href="#" onclick="openPowerPopup(); return false;">
+                    Learn More →
+                </a>
+            </p>
+        
         </div>
 
         <div class="product-card">
@@ -156,6 +163,8 @@
     </div>
 
 </section>
+<!-- Communication Popup -->
+
 <div id="popup" class="popup">
 
     <div class="popup-content">
@@ -165,25 +174,76 @@
         <h2>Automatic Backup Communication</h2>
 
         <p>
-            ElectroSDM modules primarily communicate over your local Wi-Fi
-            network using MQTT.
+            ElectroSDM modules primarily communicate over your local Wi-Fi network using MQTT.
         </p>
 
         <p>
-            If the Wi-Fi network becomes unavailable, the modules are designed
-            to automatically switch to <strong>ESP-NOW</strong> communication,
-            allowing compatible ElectroSDM modules to continue exchanging
-            essential commands locally.
+            If the Wi-Fi network becomes unavailable, compatible modules automatically
+            switch to <strong>ESP-NOW</strong> communication. This allows essential
+            commands to continue working locally without relying on the Wi-Fi network.
         </p>
 
         <p>
-            When the Wi-Fi connection is restored, communication automatically
-            returns to the normal MQTT network without user interaction.
+            Once Wi-Fi is available again, communication automatically switches back to
+            MQTT without any user interaction.
         </p>
 
         <p>
-            This design helps keep connected wall switches and automation
-            functions available, even during temporary Wi-Fi interruptions.
+            This helps keep wall switches and essential automation functions operational
+            during temporary Wi-Fi interruptions.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Power Supply Popup -->
+
+<div id="powerPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closePowerPopup()">&times;</span>
+
+        <h2>Power Supply Recommendation</h2>
+
+        <p>
+            ElectroSDM Light Modules operate on a stable
+            <strong>5V DC</strong> power supply.
+            You may use any high-quality 5V power supply with sufficient current capacity.
+        </p>
+
+        <h3>Recommended ElectroSDM Power Supply</h3>
+
+        <p>
+            For the easiest installation we recommend using an optional
+            <strong>ElectroSDM DIN Rail Power Supply</strong>.
+            These power supplies are selected and tested specifically for ElectroSDM systems
+            and simplify wiring inside the electrical cabinet.
+        </p>
+
+        <h3>Estimated Recommendation</h3>
+
+        <p>
+            The values below are preliminary estimates and may change after additional testing.
+        </p>
+
+        <ul>
+            <li>Up to 4 Light Modules → 5V / 4A</li>
+            <li>Up to 10 Light Modules → 5V / 8A</li>
+            <li>Up to 15 Light Modules → 5V / 12A</li>
+            <li>Up to 20 Light Modules → 5V / 16A</li>
+        </ul>
+
+        <p>
+            Typical price:
+            <strong>€20 – €40</strong>
+        </p>
+
+        <p>
+            <strong>Note:</strong>
+            Purchasing an ElectroSDM power supply is completely optional.
+            Any reliable 5V DC power supply with sufficient current capacity will work correctly.
         </p>
 
     </div>
@@ -192,73 +252,35 @@
 
 <script>
 
-function openPopup(){
-    document.getElementById("popup").style.display="flex";
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
 }
 
-function closePopup(){
-    document.getElementById("popup").style.display="none";
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
 }
 
-window.onclick=function(e){
-    if(e.target==document.getElementById("popup")){
+function openPowerPopup() {
+    document.getElementById("powerPopup").style.display = "flex";
+}
+
+function closePowerPopup() {
+    document.getElementById("powerPopup").style.display = "none";
+}
+
+window.onclick = function(event) {
+
+    if (event.target == document.getElementById("popup")) {
         closePopup();
     }
+
+    if (event.target == document.getElementById("powerPopup")) {
+        closePowerPopup();
+    }
+
 }
 
 </script>
-<div id="powerPopup" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close" onclick="closePowerPopup()">&times;</span>
-
-        <h2>🔋 Power Supply Recommendation</h2>
-
-        <p>
-            ElectroSDM Light Modules require a stable <strong>5V DC</strong> power supply.
-            You are free to use any high-quality 5V power supply that can provide enough current for your installation.
-        </p>
-
-        <h3>Recommended ElectroSDM Power Supply</h3>
-
-        <p>
-            For the easiest installation, we recommend using an ElectroSDM DIN Rail Power Supply.
-            It is designed and tested specifically for ElectroSDM installations and makes wiring inside the electrical cabinet much easier.
-        </p>
-
-        <h3>Estimated Example</h3>
-
-        <p>
-            The example below is only a <strong>preliminary estimate</strong>.
-            Final recommendations may change as we continue testing.
-        </p>
-
-        <ul>
-            <li>10 × Light Modules</li>
-            <li>2 × Switch Modules</li>
-            <li>1 × Server <em>(optional, can be a standard PC)</em></li>
-        </ul>
-
-        <p>
-            Estimated recommendation:
-            <strong>5V • 8A to 16A</strong>
-        </p>
-
-        <p>
-            Estimated price:
-            <strong>€20 – €40</strong>
-        </p>
-
-        <div class="popup-note">
-            <strong>Note:</strong><br>
-            Purchasing an ElectroSDM power supply is <strong>completely optional</strong>.
-            Any reliable 5V DC power supply with sufficient current capacity will work with the system.
-        </div>
-
-    </div>
-
-</div>
 
 </body>
 
