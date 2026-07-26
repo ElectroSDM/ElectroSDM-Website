@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroSDM | Light module</title>
+
+    <title>ElectroSDM | Light Module</title>
+
+    <meta name="description" content="ElectroSDM 5 Relay Light Module for professional local smart home automation.">
 
     <link rel="stylesheet" href="../css/style.css">
 
@@ -12,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,10 +30,12 @@
         </a>
 
         <div class="menu">
+
             <a href="../index.html">Home</a>
             <a href="../index.html#products">Products</a>
             <a href="#">Documentation</a>
             <a href="#">Downloads</a>
+
         </div>
 
     </nav>
@@ -44,13 +51,17 @@
         </span>
 
         <h1>
-            Light module
+            Light Module
         </h1>
 
         <p>
 
-            Professional DIN rail relay module designed for reliable,
-            fast and fully local smart home automation.
+            A professional DIN Rail relay module designed for reliable,
+            secure and fully local smart home automation.
+
+            Built around the ESP32-C6, the ElectroSDM Light Module combines
+            high performance, OTA firmware updates, local MQTT communication
+            and intelligent fallback communication using ESP-NOW.
 
         </p>
 
@@ -79,27 +90,55 @@
 <section class="features">
 
     <div class="feature">
+
         <div class="icon">⚡</div>
+
         <h3>5 Relay Outputs</h3>
-        <p>Control lighting, outlets and many other electrical devices.</p>
+
+        <p>
+            Five independent 16A relay outputs for lighting,
+            sockets and other electrical loads.
+        </p>
+
     </div>
 
     <div class="feature">
+
         <div class="icon">📡</div>
-        <h3>MQTT Ready</h3>
-        <p>Designed for fast local communication without cloud dependency.</p>
+
+        <h3>Smart Communication</h3>
+
+        <p>
+            Fast local MQTT communication with automatic
+            ESP-NOW backup when Wi-Fi is unavailable.
+        </p>
+
     </div>
 
     <div class="feature">
+
         <div class="icon">⬆️</div>
+
         <h3>OTA Updates</h3>
-        <p>Update firmware remotely without removing the module.</p>
+
+        <p>
+            Automatic firmware update support without
+            removing the module from the electrical cabinet.
+        </p>
+
     </div>
 
     <div class="feature">
+
         <div class="icon">🔒</div>
+
         <h3>100% Local</h3>
-        <p>Your smart home keeps working even without internet.</p>
+
+        <p>
+            Your smart home continues operating locally
+            without requiring any cloud services.
+        </p>
+
     </div>
 
 </section>
@@ -111,7 +150,7 @@
         <h2>Technical Specifications</h2>
 
         <p>
-            Preliminary specifications.
+            Current hardware specifications of the ElectroSDM Light Module.
         </p>
 
     </div>
@@ -119,85 +158,183 @@
     <div class="product-grid">
 
         <div class="product-card">
+
             <h3>Controller</h3>
-            <p>ESP32-C6-MINI</p>
+
+            <p>
+                ESP32-C6-MINI
+            </p>
+
         </div>
 
         <div class="product-card">
+
             <h3>Power Supply</h3>
+
             <p>
+
                 5V DC
+
                 <br><br>
+
                 <a href="#" onclick="openPowerPopup(); return false;">
                     Learn More →
                 </a>
+
             </p>
-        
+
         </div>
 
         <div class="product-card">
+
             <h3>Relay Outputs</h3>
-            <p>5 Outputs</p>
-        </div>
 
-        <div class="product-card">
-            <h3>Communication</h3>
-        
             <p>
-                Wi-Fi • MQTT
+
+                5 × 250V AC / 16A
+
                 <br><br>
-                <a href="#" onclick="openPopup(); return false;">Learn More →</a>
+
+                <a href="#" onclick="openRelayPopup(); return false;">
+                    Learn More →
+                </a>
+
             </p>
+
+        </div>
+                <div class="product-card">
+
+            <h3>Communication</h3>
+
+            <p>
+
+                Wi-Fi • MQTT • ESP-NOW
+
+                <br><br>
+
+                <a href="#" onclick="openCommunicationPopup(); return false;">
+                    Learn More →
+                </a>
+
+            </p>
+
         </div>
 
         <div class="product-card">
+
             <h3>Firmware Updates</h3>
-            <p>OTA Supported</p>
+
+            <p>
+
+                OTA Supported
+
+                <br><br>
+
+                <a href="#" onclick="openOtaPopup(); return false;">
+                    Learn More →
+                </a>
+
+            </p>
+
         </div>
 
         <div class="product-card">
+
             <h3>Mounting</h3>
-            <p>DIN Rail</p>
+
+            <p>
+
+                DIN Rail (35 mm)
+
+            </p>
+
         </div>
 
     </div>
 
 </section>
-<!-- Communication Popup -->
 
-<div id="popup" class="popup">
+<section class="products">
 
-    <div class="popup-content">
+    <div class="section-title">
 
-        <span class="close" onclick="closePopup()">&times;</span>
-
-        <h2>Automatic Backup Communication</h2>
+        <h2>Main Features</h2>
 
         <p>
-            ElectroSDM modules primarily communicate over your local Wi-Fi network using MQTT.
-        </p>
-
-        <p>
-            If the Wi-Fi network becomes unavailable, compatible modules automatically
-            switch to <strong>ESP-NOW</strong> communication. This allows essential
-            commands to continue working locally without relying on the Wi-Fi network.
-        </p>
-
-        <p>
-            Once Wi-Fi is available again, communication automatically switches back to
-            MQTT without any user interaction.
-        </p>
-
-        <p>
-            This helps keep wall switches and essential automation functions operational
-            during temporary Wi-Fi interruptions.
+            Designed for modern local smart home installations.
         </p>
 
     </div>
 
-</div>
+    <div class="product-grid">
 
-<!-- Power Supply Popup -->
+        <div class="product-card">
+
+            <h3>100% Local</h3>
+
+            <p>
+                ElectroSDM operates entirely inside your own network.
+                No cloud account is required for daily operation.
+            </p>
+
+        </div>
+
+        <div class="product-card">
+
+            <h3>Expandable</h3>
+
+            <p>
+                Easily combine multiple Light Modules, Switch Modules
+                and future ElectroSDM products into one installation.
+            </p>
+
+        </div>
+
+        <div class="product-card">
+
+            <h3>Fast Installation</h3>
+
+            <p>
+                Designed for DIN Rail installation inside electrical
+                cabinets with simple and organized wiring.
+            </p>
+
+        </div>
+
+        <div class="product-card">
+
+            <h3>OTA Firmware</h3>
+
+            <p>
+                Firmware can be updated without removing
+                the module from the electrical cabinet.
+            </p>
+
+        </div>
+
+        <div class="product-card">
+
+            <h3>High Performance</h3>
+
+            <p>
+                Built around the ESP32-C6 platform for
+                reliable performance and future expansion.
+            </p>
+        </div>
+        <div class="product-card">
+
+            <h3>Designed in Belgium</h3>
+            <p>
+                Developed with a focus on local control,
+                reliability and long-term maintainability.
+            </p>
+        </div>
+    </div>
+
+</section>
+<!-- ========================= -->
+<!-- POWER SUPPLY POPUP -->
+<!-- ========================= -->
 
 <div id="powerPopup" class="popup">
 
@@ -208,25 +345,22 @@
         <h2>Power Supply Recommendation</h2>
 
         <p>
-            ElectroSDM Light Modules operate on a stable
+            The ElectroSDM Light Module operates from a stable
             <strong>5V DC</strong> power supply.
-            You may use any high-quality 5V power supply with sufficient current capacity.
+            Any high-quality 5V power supply with sufficient current capacity
+            can be used.
         </p>
 
         <h3>Recommended ElectroSDM Power Supply</h3>
 
         <p>
-            For the easiest installation we recommend using an optional
+            For the easiest installation we recommend an optional
             <strong>ElectroSDM DIN Rail Power Supply</strong>.
-            These power supplies are selected and tested specifically for ElectroSDM systems
-            and simplify wiring inside the electrical cabinet.
+            It is selected and tested specifically for ElectroSDM systems,
+            simplifying installation inside the electrical cabinet.
         </p>
 
-        <h3>Estimated Recommendation</h3>
-
-        <p>
-            The values below are preliminary estimates and may change after additional testing.
-        </p>
+        <h3>Estimated Recommendations</h3>
 
         <ul>
             <li>Up to 4 Light Modules → 5V / 4A</li>
@@ -236,29 +370,144 @@
         </ul>
 
         <p>
-            Typical price:
-            <strong>€20 – €40</strong>
+            <strong>These values are preliminary estimates</strong>
+            and may change after additional hardware testing.
         </p>
 
         <p>
-            <strong>Note:</strong>
-            Purchasing an ElectroSDM power supply is completely optional.
-            Any reliable 5V DC power supply with sufficient current capacity will work correctly.
+            Purchasing an ElectroSDM power supply is
+            <strong>completely optional</strong>.
+            Any reliable 5V power supply with enough current capacity
+            will work correctly.
         </p>
 
     </div>
 
 </div>
 
+<!-- ========================= -->
+<!-- RELAY POPUP -->
+<!-- ========================= -->
+
+<div id="relayPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeRelayPopup()">&times;</span>
+
+        <h2>Relay Outputs</h2>
+
+        <p>
+            The ElectroSDM Light Module includes
+            <strong>five independent relay outputs</strong>.
+        </p>
+
+        <p>
+            Every relay can be configured independently and assigned to
+            switches, automations, scenes or schedules.
+        </p>
+
+        <p>
+            Each relay is rated for
+            <strong>250V AC / 16A</strong>,
+            making it suitable for most residential lighting
+            and switching applications.
+        </p>
+
+        <p>
+            Always ensure that connected loads remain within the
+            maximum electrical specifications and comply with
+            local electrical regulations.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- COMMUNICATION POPUP -->
+<!-- ========================= -->
+
+<div id="communicationPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeCommunicationPopup()">&times;</span>
+
+        <h2>Smart Communication</h2>
+
+        <p>
+            ElectroSDM modules normally communicate through
+            your local Wi-Fi network using MQTT.
+        </p>
+
+        <p>
+            If the Wi-Fi network becomes unavailable,
+            compatible ElectroSDM modules automatically
+            switch to <strong>ESP-NOW</strong>.
+        </p>
+
+        <p>
+            This allows essential communication between
+            switches and Light Modules to continue,
+            helping keep your lighting operational even
+            during temporary Wi-Fi interruptions.
+        </p>
+
+        <p>
+            Once the Wi-Fi network becomes available again,
+            every module automatically returns to MQTT
+            communication without requiring any user action.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- OTA POPUP -->
+<!-- ========================= -->
+
+<div id="otaPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeOtaPopup()">&times;</span>
+
+        <h2>Automatic OTA Updates</h2>
+
+        <p>
+            ElectroSDM is designed to automatically keep
+            every module up to date with the latest firmware.
+        </p>
+
+        <p>
+            The ElectroSDM Server periodically checks for
+            available firmware updates.
+            When a newer version is detected,
+            compatible modules can update directly
+            through the local network.
+        </p>
+
+        <p>
+            The current development version compares
+            firmware versions with information published
+            on a GitHub repository.
+            This feature is still under development while
+            the public firmware repository is being prepared.
+        </p>
+
+        <p>
+            Once released, firmware updates will be delivered
+            automatically through the ElectroSDM Server,
+            allowing secure and convenient updates without
+            removing modules from the electrical cabinet.
+        </p>
+
+    </div>
+
+</div>
 <script>
-
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
 
 function openPowerPopup() {
     document.getElementById("powerPopup").style.display = "flex";
@@ -268,17 +517,62 @@ function closePowerPopup() {
     document.getElementById("powerPopup").style.display = "none";
 }
 
-window.onclick = function(event) {
+function openRelayPopup() {
+    document.getElementById("relayPopup").style.display = "flex";
+}
 
-    if (event.target == document.getElementById("popup")) {
-        closePopup();
-    }
+function closeRelayPopup() {
+    document.getElementById("relayPopup").style.display = "none";
+}
 
-    if (event.target == document.getElementById("powerPopup")) {
+function openCommunicationPopup() {
+    document.getElementById("communicationPopup").style.display = "flex";
+}
+
+function closeCommunicationPopup() {
+    document.getElementById("communicationPopup").style.display = "none";
+}
+
+function openOtaPopup() {
+    document.getElementById("otaPopup").style.display = "flex";
+}
+
+function closeOtaPopup() {
+    document.getElementById("otaPopup").style.display = "none";
+}
+
+window.addEventListener("click", function(event) {
+
+    if(event.target == document.getElementById("powerPopup")){
         closePowerPopup();
     }
 
-}
+    if(event.target == document.getElementById("relayPopup")){
+        closeRelayPopup();
+    }
+
+    if(event.target == document.getElementById("communicationPopup")){
+        closeCommunicationPopup();
+    }
+
+    if(event.target == document.getElementById("otaPopup")){
+        closeOtaPopup();
+    }
+
+});
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closePowerPopup();
+        closeRelayPopup();
+        closeCommunicationPopup();
+        closeOtaPopup();
+
+    }
+
+});
 
 </script>
 
