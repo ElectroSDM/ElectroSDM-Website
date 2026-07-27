@@ -641,3 +641,87 @@ footer{
     font-weight:600;
 
 }
+
+/* ========================= */
+/* COMPANY PAGE */
+/* ========================= */
+
+.company-page{
+    max-width:1200px;
+    margin:120px auto;
+    padding:0 40px;
+}
+
+.company-intro{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.company-intro h1{
+    font-size:64px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.company-intro p{
+    font-size:20px;
+    color:#94A3B8;
+}
+
+.company-section{
+    background:#182334;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:24px;
+    padding:45px;
+    margin-bottom:45px;
+    transition:.25s;
+}
+
+.company-section:hover{
+    border-color:#3B82F6;
+    transform:translateY(-4px);
+}
+
+.company-section h2{
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+.company-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.company-item h3{
+    font-size:23px;
+    margin-bottom:14px;
+}
+
+.company-item p{
+    color:#B5C0D1;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.company-item ul{
+    margin-top:15px;
+    margin-left:22px;
+    color:#B5C0D1;
+}
+
+.company-item li{
+    margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+.company-grid{
+    grid-template-columns:1fr;
+}
+
+.company-intro h1{
+    font-size:48px;
+}
+
+}
